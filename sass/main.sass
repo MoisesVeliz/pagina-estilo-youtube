@@ -6,6 +6,7 @@ $gris-medio: #e7e7e7
 $gris-claro: #f9f9f9
 $primario: #FF0000
 $tema-claro: #fff
+
 // ---- ---- ---- Estilos generales ---- ---- ---- 
 *
 	margin: 0px
@@ -41,13 +42,16 @@ img
 	.menu
 		.active
 			background-color: $gris-medio
+			transition: all 0.3s ease !important
 		&.dark
 			.active
 				background: $dark-claro!important
+				transition: all 0.3s ease !important
 
 .header, .menu
 	background-color: rgba(255,255,255, 0.98)
 	position: fixed
+	transition: all 0.3s ease !important
 	&.dark
 		background-color: $dark
 		
@@ -113,6 +117,7 @@ img
 			border-radius: 2px 0px 0px 2px
 			border: 1px solid $gris-medio
 			font-size: 17px
+
 		button
 			padding: 6px 25px 7px 25px
 			border: 1px solid $gris-medio
@@ -146,9 +151,9 @@ img
 				top: -2px
 				left: 0
 				right: unset
-				
+				transition: all 0.3s ease !important
 			&.activate::after
-				transition: all 0.5s ease
+				
 				left: unset
 				right: 0
 
@@ -178,6 +183,7 @@ img
 				background: $dark-claro
 				color: $gris-medio
 				border: 1px solid $gris-oscuro
+				transition: all 0.3s ease !important
 
 // ---- ---- ---- Menu LATERAL ---- ---- ---- 
 .menu
@@ -218,6 +224,7 @@ img
 	padding: 0px 25px
 	z-index: 1000
 	background: $gris-claro
+	transition: all 0.3s ease !important
 	h3
 		margin: 35px 0px
 	hr

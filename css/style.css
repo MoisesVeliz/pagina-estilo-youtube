@@ -40,10 +40,16 @@ img {
 .desplegar .menu .active {
   background-color: #e7e7e7;
 }
+.desplegar .menu.dark .active {
+  background: #242424 !important;
+}
 
 .header, .menu {
   background-color: rgba(255, 255, 255, 0.98);
   position: fixed;
+}
+.header.dark, .menu.dark {
+  background-color: #1f1f1f;
 }
 
 .avatar {
@@ -62,7 +68,7 @@ img {
   grid-template-columns: auto 1fr auto;
   grid-template-areas: "logo search btns";
   align-items: center;
-  padding: 0px 25px 0px 15px;
+  padding: 5px 25px 5px 15px;
   width: 100%;
   z-index: 1001;
 }
@@ -128,6 +134,33 @@ img {
   display: flex;
   align-items: center;
 }
+.header .btns .switch {
+  background: #515151;
+  padding: 2px 10px;
+  position: relative;
+  font-size: 1em;
+}
+.header .btns .switch span i {
+  color: #FF0000;
+}
+.header .btns .switch::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  background: #e7e7e7;
+  border: 1px solid #606060;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: unset;
+}
+.header .btns .switch.activate::after {
+  transition: all 0.5s ease;
+  left: unset;
+  right: 0;
+}
 .header .btns .btns__icons {
   grid-area: btns;
   display: flex;
@@ -146,6 +179,17 @@ img {
 .header .btns button:hover {
   background: #e7e7e7;
   cursor: pointer;
+}
+.header.dark .fas, .header.dark a, .header.dark .logo__titulo {
+  color: #e7e7e7 !important;
+}
+.header.dark button:hover {
+  background-color: #606060 !important;
+}
+.header.dark .search input, .header.dark .search button {
+  background: #242424;
+  color: #e7e7e7;
+  border: 1px solid #606060;
 }
 
 .menu {
@@ -179,6 +223,15 @@ img {
 }
 .menu a .fa-fire span {
   margin-left: 2px;
+}
+.menu.dark a {
+  color: #e7e7e7;
+}
+.menu.dark a:hover {
+  background-color: #242424;
+}
+.menu.dark .active {
+  background-color: #242424;
 }
 
 .main {
@@ -234,6 +287,15 @@ img {
 .main .main__contenedor .main__video .video-descripcion .fas {
   font-size: 1.125em;
   padding: 0px 2px;
+}
+.main.dark {
+  background-color: #242424;
+}
+.main.dark h3, .main.dark .descripcion__titulo {
+  color: #f9f9f9 !important;
+}
+.main.dark .descripcion__footer, .main.dark .descripcion__autor {
+  color: #e7e7e7 !important;
 }
 
 @media screen and (max-width: 1200px) {
